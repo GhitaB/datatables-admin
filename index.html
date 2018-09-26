@@ -22,14 +22,27 @@
           <th v-for="column in columns">
             <i class="fas fa-long-arrow-alt-left fa-2x dta-btn move-col-left"></i>
             <i class="fas fa-long-arrow-alt-right fa-2x dta-btn move-col-right"></i>
+            <i class="fas fa-plus fa-2x dta-btn add-col"></i>
+            <i class="fas fa-edit fa-2x dta-btn edit-col"></i>
+            <i class="fas fa-times fa-2x dta-btn delete-col"></i>
             <br />
             {{ column }}
+          </th>
+          <th>
+            Preview
           </th>
         </tr>
       </thead>
       <tbody>
         <tr>
           <td v-for="column in columns">some data</td>
+          <td>
+            <i class="fas fa-long-arrow-alt-up fa-2x dta-btn move-row-up"></i>
+            <i class="fas fa-long-arrow-alt-down fa-2x dta-btn move-row-down"></i>
+            <i class="fas fa-plus fa-2x dta-btn add-row"></i>
+            <i class="fas fa-edit fa-2x dta-btn edit-row"></i>
+            <i class="fas fa-times fa-2x dta-btn delete-row"></i>
+          </td>
         </tr>
       </tbody>
     </table>

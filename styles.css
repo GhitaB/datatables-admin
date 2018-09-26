@@ -25,7 +25,17 @@ body.dta div#datatables-admin h1 {
 body.dta div#datatables-admin table#wip {
   background: #FFFFFF;
   padding: 10px;
+  border-spacing: 5px;
   color: #111111;
+  margin: 0 auto;
+}
+
+body.dta div#datatables-admin table#wip tr,
+body.dta div#datatables-admin table#wip td,
+body.dta div#datatables-admin table#wip th {
+  border: 2px solid #96adc8;
+  padding: 5px;
+  margin: 5px;
 }
 
 body.dta div#datatables-admin .dta-btn {
