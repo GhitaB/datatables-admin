@@ -51,6 +51,12 @@ new Vue({
       }
     },
 
+    add_row: function (row_index) {
+      // Add a new row after given index
+      row_index ++;
+      this.rows.splice(row_index, 0, new Array(this.columns.length));
+    },
+
     delete_row: function (row_index) {
       this.rows.splice(row_index, 1);
     }
