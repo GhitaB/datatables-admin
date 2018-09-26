@@ -10,15 +10,14 @@ body.dta {
 }
 
 body.dta div#datatables-admin {
-  max-width: 1200px;
   background: #96adc8;
   padding: 20px;
-  margin: 0 auto;
+  margin: 20px;
 }
 
 body.dta div#datatables-admin h1 {
   font-family: 'Notable', sans-serif;
-  color: #6d454c;
+  color: #111111;
   text-align: center;
 }
 
@@ -27,7 +26,7 @@ body.dta div#datatables-admin table#wip {
   padding: 10px;
   border-spacing: 5px;
   color: #111111;
-  margin: 0 auto;
+  margin: auto;
 }
 
 body.dta div#datatables-admin table#wip tr,
@@ -44,11 +43,4 @@ body.dta div#datatables-admin .dta-btn {
 
 body.dta div#datatables-admin .dta-btn:hover {
   color: #d89d6a;
-}
-
-body.dta div#datatables-admin div#dta-json {
-  margin-top: 40px;
-  background: #fcff6c;
-  padding: 20px;
-  color: #111111;
 }
