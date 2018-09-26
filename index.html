@@ -37,7 +37,8 @@
       </thead>
       <tbody>
         <tr v-for="(row, index_row) in rows" :key="index_row">
-          <td v-for="(column, index_col) in columns" :key="index_col">{{ rows[index_row][index_col] }}</td>
+          <td v-for="(column, index_col) in columns" :key="index_col">
+            <editable :content="rows[index_row][index_col]" v-on:update="update_row($event, index_row, index_col)"></editable>
           <td>
             <i class="fas fa-long-arrow-alt-up fa-2x dta-btn move-row-up" v-on:click="move_row_up(index_row)" title="Move row up"></i>
             <i class="fas fa-long-arrow-alt-down fa-2x dta-btn move-row-down" v-on:click="move_row_down(index_row)" title="Move row down"></i>

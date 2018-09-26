@@ -29,6 +29,10 @@ new Vue({
       this.columns[col_index] = content;
     },
 
+    update_row: function(content, row_index, col_index) {
+      this.rows[row_index][col_index] = content;
+    },
+
     add_col: function(col_index) {
       // Add a new column at given index
       this.columns.splice(col_index, 0, this.LOREM);
