@@ -15,10 +15,9 @@ Vue.component('editable', {
 new Vue({
   el: '#datatables-admin',
   data: {
-    LOREM: "Demo text",
+    LOREM: "Click me to edit",
     NONE: "",
-    test_editable: 'Click me to edit',
-    columns: ['Demo column 1', 'Demo column 2', 'Demo column 3', 'Demo column 4'],
+    columns: ['Click me to edit', 'Demo column 2', 'Demo column 3', 'Demo column 4'],
     rows: [
       ['col1 data1', 'col2 data1', 'col3 data1', 'col4 data1'],
       ['col1 data2', 'col2 data2', 'col3 data2', 'col4 data2'],
@@ -26,10 +25,6 @@ new Vue({
     ],
   },
   methods: {
-    update_editable(content) {
-      this.test_editable = content;
-    },
-
     update_col(content, col_index) {
       this.columns[col_index] = content;
     },
