@@ -30,6 +30,10 @@ new Vue({
       this.test_editable = content;
     },
 
+    update_col(content, col_index) {
+      this.columns[col_index] = content;
+    },
+
     add_col: function (col_index) {
       // Add a new column at given index
       this.columns.splice(col_index, 0, this.LOREM);
