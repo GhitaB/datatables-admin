@@ -25,4 +25,13 @@ body.dta div#datatables-admin h1 {
 body.dta div#datatables-admin table#wip {
   background: #FFFFFF;
   padding: 10px;
+  color: #111111;
+}
+
+body.dta div#datatables-admin .dta-btn {
+  color: #96adc8;
+}
+
+body.dta div#datatables-admin .dta-btn:hover {
+  color: #d89d6a;
 }

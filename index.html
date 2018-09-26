@@ -8,7 +8,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+        integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 </head>
+
 <body class="dta">
   <div id="datatables-admin">
     <h1>Datatables admin</h1>
@@ -16,7 +19,12 @@
     <table id="wip">
       <thead>
         <tr>
-          <th v-for="column in columns">{{ column }}</th>
+          <th v-for="column in columns">
+            <i class="fas fa-long-arrow-alt-left fa-2x dta-btn move-col-left"></i>
+            <i class="fas fa-long-arrow-alt-right fa-2x dta-btn move-col-right"></i>
+            <br />
+            {{ column }}
+          </th>
         </tr>
       </thead>
       <tbody>
