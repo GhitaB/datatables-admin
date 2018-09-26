@@ -73,18 +73,34 @@ new Vue({
     },
 
     move_col_to_left: function(col_index) {
-      alert("<");
+      if(col_index == 0) {
+        return;
+      }
+      var temp = this.columns[col_index - 1];
+      this.columns[col_index - 1] = this.columns[col_index];
+      this.columns[col_index] = temp;
+      // debugger;
+      // WIP TODO move related rows info
     },
 
     move_col_to_right: function(col_index) {
+      if(col_index == this.columns.length - 1) {
+        return;
+      }
       alert(">");
     },
 
     move_row_up: function(row_index) {
+      if(row_index == 0) {
+        return;
+      }
       alert("^");
     },
 
     move_row_down: function(row_index) {
+      if(row_index == this.rows.length - 1) {
+        return;
+      }
       alert("V");
     }
   }
