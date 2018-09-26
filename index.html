@@ -13,7 +13,18 @@
   <div id="datatables-admin">
     <h1>Datatables admin</h1>
 
-    <p>{{ message }}</p>
+    <table>
+      <thead>
+        <tr>
+          <th v-for="column in columns">{{ column }}</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td v-for="column in columns">some data</td>
+        </tr>
+      </tbody>
+    </table>
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script><!-- dev -->

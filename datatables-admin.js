@@ -1,6 +1,6 @@
 new Vue({
   el: '#datatables-admin',
   data: {
-    message: 'Hello Vue.js!'
+    columns: ['Demo column 1', 'Demo column 2']
   }
 })
