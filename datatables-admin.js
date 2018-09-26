@@ -25,37 +25,51 @@ new Vue({
     ],
   },
   methods: {
-    update_col(content, col_index) {
+    update_col: function(content, col_index) {
       this.columns[col_index] = content;
     },
 
-    add_col: function (col_index) {
+    add_col: function(col_index) {
       // Add a new column at given index
       this.columns.splice(col_index, 0, this.LOREM);
-      for (var i = 0; i < this.rows.length; i++) {
+      for(var i = 0; i < this.rows.length; i++) {
         var row = this.rows[i];
         row.splice(col_index, 0, this.NONE);
       }
     },
 
-    delete_col: function (col_index) {
+    delete_col: function(col_index) {
       // Remove column
       this.columns.splice(col_index, 1);
 
       // Remove related items in rows
-      for (var i = 0; i < this.rows.length; i++) {
+      for(var i = 0; i < this.rows.length; i++) {
         var row = this.rows[i];
         row.splice(col_index, 1);
       }
     },
 
-    add_row: function (row_index) {
+    add_row: function(row_index) {
       // Add a new row at given index
       this.rows.splice(row_index, 0, new Array(this.columns.length));
     },
 
-    delete_row: function (row_index) {
+    delete_row: function(row_index) {
       this.rows.splice(row_index, 1);
+    },
+
+    delete_all_rows: function() {
+      var nr_rows = this.rows.length;
+      for(var i = 0; i < nr_rows; i++) {
+        this.delete_row(0);
+      }
+    },
+
+    delete_all_cols: function() {
+      var nr_cols = this.columns.length;
+      for(var i = 0; i < nr_cols; i++) {
+        this.delete_col(0);
+      }
     }
   }
 });

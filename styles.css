@@ -10,37 +10,52 @@ body.dta {
 }
 
 body.dta div#datatables-admin {
-  background: #96adc8;
+  background: #EEEEEE;
   padding: 20px;
   margin: 20px;
 }
 
 body.dta div#datatables-admin h1 {
   font-family: 'Notable', sans-serif;
-  color: #111111;
+  color: #d89d6a;
   text-align: center;
 }
 
-body.dta div#datatables-admin table#wip {
-  background: #FFFFFF;
+body.dta div#datatables-admin table#editor {
+  background: #CCCCCC;
   padding: 10px;
   border-spacing: 5px;
   color: #111111;
   margin: auto;
 }
 
-body.dta div#datatables-admin table#wip tr,
-body.dta div#datatables-admin table#wip td,
-body.dta div#datatables-admin table#wip th {
-  border: 2px solid #96adc8;
+body.dta div#datatables-admin table#editor tr,
+body.dta div#datatables-admin table#editor td,
+body.dta div#datatables-admin table#editor th {
+  background: #FFFFFF;
   padding: 5px;
   margin: 5px;
 }
 
+body.dta div#datatables-admin table#editor th {
+  user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -o-user-select: none;
+}
+
 body.dta div#datatables-admin .dta-btn {
   color: #96adc8;
+
+  user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -o-user-select: none;
 }
 
 body.dta div#datatables-admin .dta-btn:hover {
   color: #d89d6a;
+  cursor: pointer;
 }
