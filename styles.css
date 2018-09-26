@@ -1,10 +1,10 @@
 /* https://coolors.co/96adc8-d7ffab-fcff6c-d89d6a-6d454c
    #96adc8 #d7ffab #fcff6c #d89d6a #6d454c
 */
-@import url('https://fonts.googleapis.com/css?family=Notable|Roboto');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Tangerine');
 
 body.dta {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   background: #6d454c;
   color: #6d454c;
 }
@@ -16,9 +16,12 @@ body.dta div#datatables-admin {
 }
 
 body.dta div#datatables-admin h1 {
-  font-family: 'Notable', sans-serif;
+  font-family: 'Tangerine', cursive;
   color: #d89d6a;
   text-align: center;
+  font-size: 86px;
+  font-weight: 500;
+  margin: 20px;
 }
 
 body.dta div#datatables-admin table#editor {
@@ -35,6 +38,7 @@ body.dta div#datatables-admin table#editor th {
   background: #FFFFFF;
   padding: 5px;
   margin: 5px;
+  text-align: center;
 }
 
 body.dta div#datatables-admin table#editor th {
