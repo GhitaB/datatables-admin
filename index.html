@@ -19,14 +19,14 @@
     <table id="wip">
       <thead>
         <tr>
-          <th v-for="(column, index) in columns" :key="index">
+          <th v-for="(column, index_col) in columns" :key="index_col">
             <i class="fas fa-long-arrow-alt-left fa-2x dta-btn move-col-left"></i>
             <i class="fas fa-long-arrow-alt-right fa-2x dta-btn move-col-right"></i>
             <i class="fas fa-plus fa-2x dta-btn add-col"></i>
             <i class="fas fa-edit fa-2x dta-btn edit-col"></i>
-            <i class="fas fa-times fa-2x dta-btn delete-col"></i>
+            <i class="fas fa-times fa-2x dta-btn delete-col" v-on:click="delete_col(index_col)"></i>
             <br />
-            {{ column }}
+            <span>{{ columns[index_col] }}</span>
           </th>
           <th>
             Preview

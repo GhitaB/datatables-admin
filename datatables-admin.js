@@ -21,11 +21,17 @@ new Vue({
       ['col1 data1', 'col2 data1', 'col3 data1', 'col4 data1'],
       ['col1 data2', 'col2 data2', 'col3 data2', 'col4 data2'],
       ['col1 data3', 'col2 data3', 'col3 data3', 'col4 data3'],
-    ]
+    ],
   },
   methods: {
     update_editable(content) {
       this.test_editable = content;
+    },
+
+    delete_col: function (col_index) {
+      console.log("DELETED", col_index);
+      // this.columns[event.toElement.parentElement.cellIndex] = "";
+      this.columns.splice(col_index, 1);
     }
   }
-})
+});
