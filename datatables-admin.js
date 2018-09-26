@@ -18,24 +18,14 @@ new Vue({
     test_editable: 'Click me to edit',
     columns: ['Demo column 1', 'Demo column 2', 'Demo column 3', 'Demo column 4'],
     rows: [
-      {
-        'Demo column 1': 'some data here',
-        'Demo column 2': 'test',
-        'Demo column 3': 'test 2',
-        'Demo column 4': 'something'
-      },
-
-      {
-        'Demo column 1': 'second row',
-        'Demo column 2': 'test',
-        'Demo column 3': 'test 2',
-        'Demo column 4': 'something'
-      }
+      ['col1 data1', 'col2 data1', 'col3 data1', 'col4 data1'],
+      ['col1 data2', 'col2 data2', 'col3 data2', 'col4 data2'],
+      ['col1 data3', 'col2 data3', 'col3 data3', 'col4 data3'],
     ]
   },
   methods: {
-    update_editable (content) {
-      this.test_editable = content
+    update_editable(content) {
+      this.test_editable = content;
     }
   }
 })
