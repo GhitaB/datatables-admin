@@ -37,6 +37,10 @@ new Vue({
         var row = this.rows[i];
         row.splice(col_index, 1);
       }
+    },
+
+    delete_row: function (row_index) {
+      this.rows.splice(row_index, 1);
     }
   }
 });
