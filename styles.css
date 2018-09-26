@@ -1,19 +1,28 @@
 /* https://coolors.co/96adc8-d7ffab-fcff6c-d89d6a-6d454c
    #96adc8 #d7ffab #fcff6c #d89d6a #6d454c
 */
+@import url('https://fonts.googleapis.com/css?family=Notable|Roboto');
 
 body.dta {
-  background: #EEEEEE;
+  font-family: 'Roboto', sans-serif;
+  background: #6d454c;
   color: #6d454c;
 }
 
 body.dta div#datatables-admin {
   max-width: 1200px;
-  background: #FFFFFF;
+  background: #96adc8;
   padding: 20px;
   margin: 0 auto;
 }
 
 body.dta div#datatables-admin h1 {
-  color: #d89d6a;
+  font-family: 'Notable', sans-serif;
+  color: #6d454c;
+  text-align: center;
+}
+
+body.dta div#datatables-admin table#wip {
+  background: #FFFFFF;
+  padding: 10px;
 }
