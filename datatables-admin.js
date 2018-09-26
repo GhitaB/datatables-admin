@@ -29,9 +29,14 @@ new Vue({
     },
 
     delete_col: function (col_index) {
-      console.log("DELETED", col_index);
-      // this.columns[event.toElement.parentElement.cellIndex] = "";
+      // Remove column
       this.columns.splice(col_index, 1);
+
+      // Remove related items in rows
+      for (var i = 0; i < this.rows.length; i++) {
+        var row = this.rows[i];
+        row.splice(col_index, 1);
+      }
     }
   }
 });
