@@ -31,8 +31,7 @@ new Vue({
     },
 
     add_col: function (col_index) {
-      // Add a new column after given index
-      col_index ++;
+      // Add a new column at given index
       this.columns.splice(col_index, 0, this.LOREM);
       for (var i = 0; i < this.rows.length; i++) {
         var row = this.rows[i];
@@ -52,8 +51,7 @@ new Vue({
     },
 
     add_row: function (row_index) {
-      // Add a new row after given index
-      row_index ++;
+      // Add a new row at given index
       this.rows.splice(row_index, 0, new Array(this.columns.length));
     },
 

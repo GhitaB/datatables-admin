@@ -22,7 +22,7 @@
           <th v-for="(column, index_col) in columns" :key="index_col">
             <i class="fas fa-long-arrow-alt-left fa-2x dta-btn move-col-left"></i>
             <i class="fas fa-long-arrow-alt-right fa-2x dta-btn move-col-right"></i>
-            <i class="fas fa-plus fa-2x dta-btn add-col" v-on:click="add_col(index_col)"></i>
+            <i class="fas fa-plus fa-2x dta-btn add-col" v-on:click="add_col(index_col + 1)"></i>
             <i class="fas fa-edit fa-2x dta-btn edit-col"></i>
             <i class="fas fa-times fa-2x dta-btn delete-col" v-on:click="delete_col(index_col)"></i>
             <br />
@@ -30,6 +30,7 @@
           </th>
           <th>
             <i class="fas fa-plus fa-2x dta-btn add-col" v-on:click="add_col(0)"></i>
+            <i class="fas fa-plus fa-2x dta-btn add-row" v-on:click="add_row(0)"></i>
           </th>
         </tr>
       </thead>
@@ -39,7 +40,7 @@
           <td>
             <i class="fas fa-long-arrow-alt-up fa-2x dta-btn move-row-up"></i>
             <i class="fas fa-long-arrow-alt-down fa-2x dta-btn move-row-down"></i>
-            <i class="fas fa-plus fa-2x dta-btn add-row" v-on:click="add_row(index_row)"></i>
+            <i class="fas fa-plus fa-2x dta-btn add-row" v-on:click="add_row(index_row + 1)"></i>
             <i class="fas fa-edit fa-2x dta-btn edit-row"></i>
             <i class="fas fa-times fa-2x dta-btn delete-row" v-on:click="delete_row(index_row)"></i>
           </td>
