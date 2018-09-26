@@ -45,3 +45,10 @@ body.dta div#datatables-admin .dta-btn {
 body.dta div#datatables-admin .dta-btn:hover {
   color: #d89d6a;
 }
+
+body.dta div#datatables-admin div#dta-json {
+  margin-top: 40px;
+  background: #fcff6c;
+  padding: 20px;
+  color: #111111;
+}
