@@ -70,6 +70,22 @@ new Vue({
       for(var i = 0; i < nr_cols; i++) {
         this.delete_col(0);
       }
+    },
+
+    move_col_to_left: function(col_index) {
+      alert("<");
+    },
+
+    move_col_to_right: function(col_index) {
+      alert(">");
+    },
+
+    move_row_up: function(row_index) {
+      alert("^");
+    },
+
+    move_row_down: function(row_index) {
+      alert("V");
     }
   }
 });
