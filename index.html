@@ -46,6 +46,11 @@
         </tr>
       </tbody>
     </table>
+ <editable
+      :content="columns"
+      v-on:update="updateHeadline"
+    >
+    </editable>
 
     <div id="dta-json">
       {

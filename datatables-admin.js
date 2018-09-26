@@ -1,3 +1,17 @@
+Vue.component('editable', {
+  template: `
+    <div contenteditable="true" @blur="emitChange">
+      {{ content }}
+    </div>
+  `,
+  props: ['content'],
+  methods: {
+    emitChange(ev) {
+      this.$emit('update', ev.target.textContent)
+    }
+  }
+})
+
 new Vue({
   el: '#datatables-admin',
   data: {
@@ -17,5 +31,10 @@ new Vue({
         'Demo column 4': 'something'
       }
     ]
+  },
+  methods: {
+    updateHeadline (content) {
+      this.columns = content
+    }
   }
 })
