@@ -98,7 +98,9 @@ new Vue({
       if(row_index == 0) {
         return;
       }
-      alert("^");
+      var temp = this.rows[row_index - 1];
+      this.rows[row_index - 1] = this.rows[row_index];
+      this.rows[row_index] = temp;
     },
 
     move_row_down: function(row_index) {
