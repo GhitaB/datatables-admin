@@ -138,3 +138,7 @@ new Vue({
     }
   }
 });
+
+// TODO:
+// On column move move the rows data, too.
+// Fix bug on rows move with new content added.
