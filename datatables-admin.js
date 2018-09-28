@@ -83,15 +83,15 @@ new Vue({
       var temp = this.columns[col_index - 1];
       this.columns[col_index - 1] = this.columns[col_index];
       this.columns[col_index] = temp;
-      // debugger;
-      // WIP TODO move related rows info
     },
 
     move_col_to_right: function(col_index) {
       if(col_index == this.columns.length - 1) {
         return;
       }
-      alert(">");
+      var temp = this.columns[col_index + 1];
+      this.columns[col_index + 1] = this.columns[col_index];
+      this.columns[col_index] = temp;
     },
 
     move_row_up: function(row_index) {
