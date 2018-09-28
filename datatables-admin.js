@@ -50,6 +50,11 @@ new Vue({
     },
 
     delete_col: function(col_index) {
+      var result = confirm("Are you sure?");
+      if(!result) {
+        return;
+      }
+
       // Remove column
       this.columns.splice(col_index, 1);
 
