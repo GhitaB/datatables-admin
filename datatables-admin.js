@@ -107,7 +107,9 @@ new Vue({
       if(row_index == this.rows.length - 1) {
         return;
       }
-      alert("V");
+      var temp = this.rows[row_index + 1];
+      this.rows[row_index + 1] = this.rows[row_index];
+      this.rows[row_index] = temp;
     }
   }
 });
