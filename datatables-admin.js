@@ -49,10 +49,12 @@ new Vue({
       this.refresh();
     },
 
-    delete_col: function(col_index) {
-      var result = confirm("Are you sure?");
-      if(!result) {
-        return;
+    delete_col: function(col_index, skip_confirm = false) {
+      if(!skip_confirm) {
+        var result = confirm("Are you sure you want to delete this column?");
+        if(!result) {
+          return;
+        }
       }
 
       // Remove column
@@ -74,29 +76,42 @@ new Vue({
       this.refresh();
     },
 
-    delete_row: function(row_index) {
-      var result = confirm("Want to delete?");
-      if (result) {
-          //Logic to delete the item
+    delete_row: function(row_index, skip_confirm = false) {
+      if(!skip_confirm) {
+        var result = confirm("Are you sure you want to delete this row?");
+        if(!result) {
+          return;
+        }
       }
+
       this.rows.splice(row_index, 1);
 
       this.refresh();
     },
 
     delete_all_rows: function() {
+      var result = confirm("Are you sure you want to delete all rows?");
+      if(!result) {
+        return;
+      }
+
       var nr_rows = this.rows.length;
       for(var i = 0; i < nr_rows; i++) {
-        this.delete_row(0);
+        this.delete_row(0, skip_confirm = true);
       }
 
       this.refresh();
     },
 
     delete_all_cols: function() {
+      var result = confirm("Are you sure you want to delete all columns?");
+      if(!result) {
+        return;
+      }
+
       var nr_cols = this.columns.length;
       for(var i = 0; i < nr_cols; i++) {
-        this.delete_col(0);
+        this.delete_col(0, skip_confirm = true);
       }
 
       this.refresh();
