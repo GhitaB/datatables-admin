@@ -25,19 +25,18 @@ new Vue({
     ],
   },
   methods: {
-    refresh: function(element) {
-      element.$forceUpdate();
-      console.log(element);
+    refresh: function() {
+      this.$forceUpdate();
     },
 
     update_col: function(content, col_index) {
       this.columns[col_index] = content;
-      this.refresh(this);
+      this.refresh();
     },
 
     update_row: function(content, row_index, col_index) {
       this.rows[row_index][col_index] = content;
-      this.refresh(this);
+      this.refresh();
     },
 
     add_col: function(col_index) {
@@ -47,7 +46,7 @@ new Vue({
         var row = this.rows[i];
         row.splice(col_index, 0, this.NONE);
       }
-      this.refresh(this);
+      this.refresh();
     },
 
     delete_col: function(col_index) {
@@ -60,20 +59,20 @@ new Vue({
         row.splice(col_index, 1);
       }
 
-      this.refresh(this);
+      this.refresh();
     },
 
     add_row: function(row_index) {
       // Add a new row at given index
       this.rows.splice(row_index, 0, new Array(this.columns.length));
 
-      this.refresh(this);
+      this.refresh();
     },
 
     delete_row: function(row_index) {
       this.rows.splice(row_index, 1);
 
-      this.refresh(this);
+      this.refresh();
     },
 
     delete_all_rows: function() {
@@ -82,7 +81,7 @@ new Vue({
         this.delete_row(0);
       }
 
-      this.refresh(this);
+      this.refresh();
     },
 
     delete_all_cols: function() {
@@ -91,7 +90,7 @@ new Vue({
         this.delete_col(0);
       }
 
-      this.refresh(this);
+      this.refresh();
     },
 
     move_col_to_left: function(col_index) {
@@ -102,7 +101,7 @@ new Vue({
       this.columns[col_index - 1] = this.columns[col_index];
       this.columns[col_index] = temp;
 
-      this.refresh(this);
+      this.refresh();
     },
 
     move_col_to_right: function(col_index) {
@@ -113,7 +112,7 @@ new Vue({
       this.columns[col_index + 1] = this.columns[col_index];
       this.columns[col_index] = temp;
 
-      this.refresh(this);
+      this.refresh();
     },
 
     move_row_up: function(row_index) {
@@ -124,7 +123,7 @@ new Vue({
       this.rows[row_index - 1] = this.rows[row_index];
       this.rows[row_index] = temp;
 
-      this.refresh(this);
+      this.refresh();
     },
 
     move_row_down: function(row_index) {
@@ -135,7 +134,7 @@ new Vue({
       this.rows[row_index + 1] = this.rows[row_index];
       this.rows[row_index] = temp;
 
-      this.refresh(this);
+      this.refresh();
     }
   }
 });
