@@ -75,6 +75,10 @@ new Vue({
     },
 
     delete_row: function(row_index) {
+      var result = confirm("Want to delete?");
+      if (result) {
+          //Logic to delete the item
+      }
       this.rows.splice(row_index, 1);
 
       this.refresh();
