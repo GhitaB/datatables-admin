@@ -14,28 +14,21 @@ Vue.component('editable', {
 
 Vue.component('table-preview', {
   template: `
-    <button v-on:click="render_table">Render table to preview (like in view mode)</button>
-    <table id="preview">
-      <thead>
-        <tr>
-          <th v-for="(column, index_col) in this.$parent.$data.$columns" :key="index_col">
-            {{ columns[index_col] }}
-          </th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr v-for="(row, index_row) in this.$parent.$data.$rows" :key="index_row">
-          <td v-for="(column, index_col) in this.$parent.$data.$columns" :key="index_col">
-            {{ rows[index_row][index_col] }}
-          </td>
-        </tr>
-      </tbody>
-    </table>
+    <div class="table-preview-container">
+      <button v-on:click="render_table">Render table to preview (like in view mode)</button>
+      <div class="table-placeholder"></div>
+    </div>
   `,
   props: ['content'],
   methods: {
     render_table() {
-      alert("ZZZ");
+      var columns = this.$parent.columns;
+      var rows = this.$parent.rows;
+      console.log(columns);
+      console.log(rows);
+      // TODO somehow we will render this table replacing the table-placeholder
+      // Include datatables for a full preview.
+      // Destroy existing table preview (if any).
     }
   }
 });
