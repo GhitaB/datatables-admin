@@ -14,23 +14,29 @@ Vue.component('editable', {
 
 Vue.component('table-preview', {
   template: `
-    <table>
+    <button v-on:click="render_table">Render table to preview (like in view mode)</button>
+    <table id="preview">
       <thead>
         <tr>
-          <th>Test1</th>
-          <th>Test2</th>
+          <th v-for="(column, index_col) in this.$parent.$data.$columns" :key="index_col">
+            {{ columns[index_col] }}
+          </th>
         </tr>
-      <thead>
+      </thead>
       <tbody>
-        <tr>
-          <td>Value 1</td>
-          <td>Value 2</td>
+        <tr v-for="(row, index_row) in this.$parent.$data.$rows" :key="index_row">
+          <td v-for="(column, index_col) in this.$parent.$data.$columns" :key="index_col">
+            {{ rows[index_row][index_col] }}
+          </td>
         </tr>
       </tbody>
     </table>
   `,
   props: ['content'],
   methods: {
+    render_table() {
+      alert("ZZZ");
+    }
   }
 });
 
