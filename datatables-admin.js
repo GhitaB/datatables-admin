@@ -10,7 +10,29 @@ Vue.component('editable', {
       this.$emit('update', ev.target.textContent)
     }
   }
-})
+});
+
+Vue.component('table-preview', {
+  template: `
+    <table>
+      <thead>
+        <tr>
+          <th>Test1</th>
+          <th>Test2</th>
+        </tr>
+      <thead>
+      <tbody>
+        <tr>
+          <td>Value 1</td>
+          <td>Value 2</td>
+        </tr>
+      </tbody>
+    </table>
+  `,
+  props: ['content'],
+  methods: {
+  }
+});
 
 new Vue({
   el: '#datatables-admin',
