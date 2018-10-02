@@ -24,6 +24,14 @@ Vue.component('table-preview', {
     render_table() {
       var columns = this.$parent.columns;
       var rows = this.$parent.rows;
+      var el = event.srcElement;
+      var parent = el.offsetParent;
+      var table_placeholder = document.querySelector('.table-placeholder');
+
+      var new_el = document.createElement("p");
+      new_el.innerHTML = "This is a paragraph.";
+      table_placeholder.parentNode.replaceChild(new_el, table_placeholder);
+
       console.log(columns);
       console.log(rows);
       // TODO somehow we will render this table replacing the table-placeholder
