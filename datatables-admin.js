@@ -52,6 +52,11 @@ Vue.component('table-preview', {
       new_el.className = "table-render-preview";
       new_el.innerHTML = make_table_html(columns, rows);
       table_placeholder.parentNode.replaceChild(new_el, table_placeholder);
+
+      $(document).ready(function(){
+        // TODO destroy prev datatable
+        $('.table-render-preview').dataTable();
+      });
     }
   }
 });
