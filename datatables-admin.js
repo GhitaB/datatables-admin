@@ -58,7 +58,8 @@ Vue.component('table-preview', {
       table_placeholder.parentNode.replaceChild(new_el, table_placeholder);
 
       $('.table-render-preview').dataTable({
-        "destroy": true
+        "destroy": true,
+        aaSorting: []
       });
     }
   }
