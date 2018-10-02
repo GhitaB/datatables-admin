@@ -48,14 +48,17 @@ Vue.component('table-preview', {
           return result;
       }
 
+      if ($.fn.DataTable.isDataTable(".table-render-preview")) {
+        $('.table-render-preview').DataTable().clear().destroy();
+      }
+
       var new_el = document.createElement("table");
       new_el.className = "table-render-preview";
       new_el.innerHTML = make_table_html(columns, rows);
       table_placeholder.parentNode.replaceChild(new_el, table_placeholder);
 
-      $(document).ready(function(){
-        // TODO destroy prev datatable
-        $('.table-render-preview').dataTable();
+      $('.table-render-preview').dataTable({
+        "destroy": true
       });
     }
   }
@@ -211,7 +214,3 @@ new Vue({
     }
   }
 });
-
-// TODO:
-// On column move move the rows data, too.
-// Fix bug on rows move with new content added.
