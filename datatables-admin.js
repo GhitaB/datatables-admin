@@ -15,7 +15,7 @@ Vue.component('editable', {
 Vue.component('table-preview', {
   template: `
     <div class="table-preview-container">
-      <button v-on:click="render_table">Render table to preview (like in view mode)</button>
+      <button class='render-table' v-on:click="render_table">Preview table</button>
       <table class="table-render-preview"></table>
     </div>
   `,

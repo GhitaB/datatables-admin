@@ -72,3 +72,8 @@ body.dta div#datatables-admin div.table-preview-container {
 body.dta div#datatables-admin table.table-render-preview {
   margin: auto;
 }
+
+body.dta div#datatables-admin button.render-table {
+  margin-bottom: 40px;
+  padding: 10px;
+}
