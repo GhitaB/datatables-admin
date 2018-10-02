@@ -28,9 +28,24 @@ Vue.component('table-preview', {
       var parent = el.offsetParent;
       var table_placeholder = document.querySelector('.table-render-preview');
 
-      var new_el = document.createElement("p");
-      new_el.innerHTML = "<table><tr><td>Columns: " + columns + " Rows:" + rows + "</td></tr></table>";
+      function makeTableHTML(myArray) {
+          var result = "<table border=1>";
+          for(var i=0; i<myArray.length; i++) {
+              result += "<tr>";
+              for(var j=0; j<myArray[i].length; j++){
+                  result += "<td>"+myArray[i][j]+"</td>";
+              }
+              result += "</tr>";
+          }
+          result += "</table>";
+
+          return result;
+      }
+
+      var html_content = makeTableHTML(rows);
+      var new_el = document.createElement("table");
       new_el.className = "table-render-preview";
+      new_el.innerHTML = html_content;
       table_placeholder.parentNode.replaceChild(new_el, table_placeholder);
     }
   }
