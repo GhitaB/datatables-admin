@@ -63,3 +63,12 @@ body.dta div#datatables-admin .dta-btn:hover {
   color: #d89d6a;
   cursor: pointer;
 }
+
+body.dta div#datatables-admin div.table-preview-container {
+  text-align: center;
+  margin-top: 40px;
+}
+
+body.dta div#datatables-admin table.table-render-preview {
+  margin: auto;
+}
