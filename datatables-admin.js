@@ -195,6 +195,7 @@ new Vue({
         this.rows[i][col_index - 1] = this.rows[i][col_index];
         this.rows[i][col_index] = temp;
       }
+
       this.refresh();
     },
 
@@ -205,6 +206,12 @@ new Vue({
       var temp = this.columns[col_index + 1];
       this.columns[col_index + 1] = this.columns[col_index];
       this.columns[col_index] = temp;
+
+      for(var i = 0; i < this.rows.length; i++) {
+        temp = this.rows[i][col_index + 1];
+        this.rows[i][col_index + 1] = this.rows[i][col_index];
+        this.rows[i][col_index] = temp;
+      }
 
       this.refresh();
     },
