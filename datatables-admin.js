@@ -28,24 +28,29 @@ Vue.component('table-preview', {
       var parent = el.offsetParent;
       var table_placeholder = document.querySelector('.table-render-preview');
 
-      function makeTableHTML(myArray) {
-          var result = "<table border=1>";
-          for(var i=0; i<myArray.length; i++) {
-              result += "<tr>";
-              for(var j=0; j<myArray[i].length; j++){
-                  result += "<td>"+myArray[i][j]+"</td>";
-              }
-              result += "</tr>";
+      function make_table_html(columns, rows) {
+          var result = "<table border=1><thead><tr>";
+
+          for(var i = 0; i < columns.length; i++) {
+            result += "<th>" + columns[i] + "</th>";
           }
-          result += "</table>";
+
+          result += "</thead><tbody>"
+          for(var i = 0; i < rows.length; i++) {
+            result += "<tr>";
+            for(var j = 0; j < rows[i].length; j++) {
+              result += "<td>" + rows[i][j] + "</td>";
+            }
+            result += "</tr>";
+          }
+          result += "</tbody></table>";
 
           return result;
       }
 
-      var html_content = makeTableHTML(rows);
       var new_el = document.createElement("table");
       new_el.className = "table-render-preview";
-      new_el.innerHTML = html_content;
+      new_el.innerHTML = make_table_html(columns, rows);
       table_placeholder.parentNode.replaceChild(new_el, table_placeholder);
     }
   }
