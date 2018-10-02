@@ -16,7 +16,7 @@ Vue.component('table-preview', {
   template: `
     <div class="table-preview-container">
       <button v-on:click="render_table">Render table to preview (like in view mode)</button>
-      <div class="table-placeholder"></div>
+      <table class="table-render-preview"></table>
     </div>
   `,
   props: ['content'],
@@ -26,17 +26,12 @@ Vue.component('table-preview', {
       var rows = this.$parent.rows;
       var el = event.srcElement;
       var parent = el.offsetParent;
-      var table_placeholder = document.querySelector('.table-placeholder');
+      var table_placeholder = document.querySelector('.table-render-preview');
 
       var new_el = document.createElement("p");
-      new_el.innerHTML = "This is a paragraph.";
+      new_el.innerHTML = "<table><tr><td>Columns: " + columns + " Rows:" + rows + "</td></tr></table>";
+      new_el.className = "table-render-preview";
       table_placeholder.parentNode.replaceChild(new_el, table_placeholder);
-
-      console.log(columns);
-      console.log(rows);
-      // TODO somehow we will render this table replacing the table-placeholder
-      // Include datatables for a full preview.
-      // Destroy existing table preview (if any).
     }
   }
 });
