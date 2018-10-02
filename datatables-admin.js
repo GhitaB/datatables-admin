@@ -215,3 +215,7 @@ new Vue({
     }
   }
 });
+
+// TODO Idea: add a URL column that cannot be deleted, to be rendered as
+// external links (symbol + link). Optional: add a column that sets the texts
+// for links.
