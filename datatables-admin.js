@@ -138,6 +138,10 @@ new Vue({
       // Add a new row at given index
       this.rows.splice(row_index, 0, new Array(this.columns.length));
 
+      for(var i = 0; i < this.columns.length; i++) {
+        this.rows[row_index][i] = this.NONE;
+      }
+
       this.refresh();
     },
 
