@@ -32,7 +32,7 @@ Vue.component('table-preview', {
       function make_table_html(columns, rows) {
         function render_link(url) {
           if(url !== undefined) {
-            return "<a href='" + url +"' target='_blank'>Link</a>";
+            return "<a href='" + url +"' target='_blank' title=" + url + ">Link<span style='display:none !important'>" + url + "</span></a>";
           } else {
             return "N/A";
           }
