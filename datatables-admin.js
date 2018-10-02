@@ -28,24 +28,37 @@ Vue.component('table-preview', {
       var parent = el.offsetParent;
       var table_placeholder = document.querySelector('.table-render-preview');
 
+
       function make_table_html(columns, rows) {
-          var result = "<table border=1><thead><tr>";
-
-          for(var i = 0; i < columns.length; i++) {
-            result += "<th>" + columns[i] + "</th>";
+        function render_link(url) {
+          if(url !== undefined) {
+            return "<a href='" + url +"' target='_blank'>Link</a>";
+          } else {
+            return "N/A";
           }
+        }
 
-          result += "</thead><tbody>"
-          for(var i = 0; i < rows.length; i++) {
-            result += "<tr>";
-            for(var j = 0; j < rows[i].length; j++) {
+        var result = "<table border=1><thead><tr>";
+
+        for(var i = 0; i < columns.length; i++) {
+          result += "<th>" + columns[i] + "</th>";
+        }
+
+        result += "</thead><tbody>"
+        for(var i = 0; i < rows.length; i++) {
+          result += "<tr>";
+          for(var j = 0; j < rows[i].length; j++) {
+            if(columns[j] == "URL") {
+              result += "<td>" +  render_link(rows[i][j]) + "</td>";
+            } else {
               result += "<td>" + rows[i][j] + "</td>";
             }
-            result += "</tr>";
           }
-          result += "</tbody></table>";
+          result += "</tr>";
+        }
+        result += "</tbody></table>";
 
-          return result;
+        return result;
       }
 
       if ($.fn.DataTable.isDataTable(".table-render-preview")) {
@@ -70,11 +83,10 @@ new Vue({
   data: {
     LOREM: "Click me to edit",
     NONE: "",
-    columns: ['Click me to edit', 'Demo column 2', 'Demo column 3', 'Demo column 4'],
+    columns: ['Click me to edit', 'Demo column 2', 'Demo column 3', 'URL'],
     rows: [
-      ['col1 data1', 'col2 data1', 'col3 data1', 'col4 data1'],
-      ['col1 data2', 'col2 data2', 'col3 data2', 'col4 data2'],
-      ['col1 data3', 'col2 data3', 'col3 data3', 'col4 data3'],
+      ['col1 data1', 'col2 data1', 'col3 data1', 'https://www.google.com'],
+      ['col1 data2', 'col2 data2', 'col3 data2', 'https://www.yahoo.com']
     ],
   },
   methods: {
