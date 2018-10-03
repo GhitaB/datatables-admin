@@ -1,23 +1,23 @@
 /* https://coolors.co/96adc8-d7ffab-fcff6c-d89d6a-6d454c
-   #96adc8 #d7ffab #fcff6c #d89d6a #6d454c
+   #FFFFFF #EEEEEE #757575 #000000 #bfd630 #A0B228 #819110
 */
 @import url('https://fonts.googleapis.com/css?family=Open+Sans|Tangerine');
 
 body.dta {
   font-family: 'Open Sans', sans-serif;
-  background: #6d454c;
-  color: #6d454c;
+  background: #EEEEEE;
+  color: #000000;
 }
 
 body.dta div#datatables-admin {
-  background: #EEEEEE;
+  background: #FFFFFF;
   padding: 20px;
   margin: 20px;
 }
 
 body.dta div#datatables-admin h1 {
   font-family: 'Tangerine', cursive;
-  color: #d89d6a;
+  color: #000000;
   text-align: center;
   font-size: 86px;
   font-weight: 500;
@@ -25,10 +25,9 @@ body.dta div#datatables-admin h1 {
 }
 
 body.dta div#datatables-admin table#editor {
-  background: #CCCCCC;
-  padding: 10px;
+  background: #EEEEEE;
   border-spacing: 5px;
-  color: #111111;
+  color: #000000;
   margin: auto;
 }
 
@@ -50,7 +49,7 @@ body.dta div#datatables-admin table#editor th {
 }
 
 body.dta div#datatables-admin .dta-btn {
-  color: #96adc8;
+  color: #A0B228;
 
   user-select: none;
   -moz-user-select: none;
@@ -60,7 +59,7 @@ body.dta div#datatables-admin .dta-btn {
 }
 
 body.dta div#datatables-admin .dta-btn:hover {
-  color: #d89d6a;
+  color: #819110;
   cursor: pointer;
 }
 
