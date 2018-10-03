@@ -24,10 +24,7 @@ Vue.component('table-preview', {
     render_table() {
       var columns = this.$parent.columns;
       var rows = this.$parent.rows;
-      var el = event.srcElement;
-      var parent = el.offsetParent;
       var table_placeholder = document.querySelector('.table-render-preview');
-
 
       function make_table_html(columns, rows) {
         function render_link(url) {

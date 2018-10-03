@@ -3,6 +3,9 @@ Changelog
 
 1.0.1 - (unreleased)
 --------------------
+* Fix:
+  - bug on Firefox (because of undefined event)
+
 * Improve:
   - add favicon
   - new color scheme
