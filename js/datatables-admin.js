@@ -240,3 +240,5 @@ new Vue({
     }
   }
 });
+
+// TODO Fix: Template literals not supported in IE. Invalid character: `
