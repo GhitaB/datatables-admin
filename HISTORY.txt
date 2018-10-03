@@ -1,0 +1,16 @@
+Changelog
+=========
+
+1.0.1 - (unreleased)
+--------------------
+
+1.0.0 - (2018-10-03)
+--------------------
+* Features:
+  - define columns, change their order, delete
+  - define rows, change their order, delete
+  - edit any cell (navigate between editable cell using Tab / Shift + Tab)
+  - delete all columns, delete all rows
+  - render the current table as Datatable (and re-render anytime) by pressing
+    "Preview table" button
+  - sort the rendered table, filter by any word (the URL is included as searchable text)
