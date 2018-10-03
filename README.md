@@ -10,4 +10,4 @@ Code on GitHub: https://github.com/GhitaB/datatables-admin
 
 ## :copyright: License
 
-See: [LICENSE file](https://github.com/GhitaB/datatables-admin/blob/master/LICENSE).
+See: [LICENSE file](https://github.com/GhitaB/datatables-admin/blob/master/docs/LICENSE).
