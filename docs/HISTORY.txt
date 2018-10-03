@@ -7,6 +7,7 @@ Changelog
   - add favicon
   - new color scheme
   - improve styles
+  - add folders structure
 
 1.0.0 - (2018-10-03)
 --------------------
