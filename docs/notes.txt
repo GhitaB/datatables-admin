@@ -3,3 +3,9 @@ $ npm install -g @vue/cli
 $ vue --version
 You are using Node v8.6.0, but this version of vue-cli requires Node >=8.9.
 Please upgrade your Node version.
+
+$ curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash
+Restart terminal.
+
+$ nvm --version
+0.33.11
