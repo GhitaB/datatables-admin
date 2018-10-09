@@ -19,3 +19,5 @@ $ vue --version
 3.0.5
 
 $ npm install -g @vue/cli-init
+
+Set gh-pages: https://medium.com/@mwolfhoffman/deploying-to-github-pages-with-vue-webpack-cli-5b2ba17f14a0
