@@ -1,1 +1,5 @@
 $ npm install -g @vue/cli
+
+$ vue --version
+You are using Node v8.6.0, but this version of vue-cli requires Node >=8.9.
+Please upgrade your Node version.
