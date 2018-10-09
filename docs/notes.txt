@@ -9,3 +9,11 @@ Restart terminal.
 
 $ nvm --version
 0.33.11
+
+$ nvm install node
+$ nvm use --delete-prefix v10.11.0
+$ node --version
+v10.11.0
+
+$ vue --version
+3.0.5
