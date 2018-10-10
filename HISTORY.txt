@@ -1,9 +1,10 @@
 Changelog
 =========
 
-1.0.1 - (unreleased)
+1.0.1 - (2018-10-10)
 --------------------
 * Fix:
+  - compatibility with IE (by restructuring the project)
   - bug on Firefox (because of undefined event)
 
 * Improve:
