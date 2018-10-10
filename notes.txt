@@ -1,3 +1,4 @@
+Stop fish, use simple terminal:
 $ npm install -g @vue/cli
 
 $ vue --version
