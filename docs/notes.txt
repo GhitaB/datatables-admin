@@ -20,5 +20,18 @@ $ vue --version
 3.0.5
 
 $ npm install -g @vue/cli-init
+$ vue init webpack datatables-admin
+
+# install dependencies
+npm install
+
+# serve with hot reload at localhost:8080
+npm run dev
+
+# build for production with minification
+npm run build
+
+# build for production and view the bundle analyzer report
+npm run build --report
 
 Set gh-pages: https://medium.com/@mwolfhoffman/deploying-to-github-pages-with-vue-webpack-cli-5b2ba17f14a0
