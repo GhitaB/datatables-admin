@@ -35,6 +35,11 @@
       </tbody>
     </table>
 
+    <div>
+      <b>DEBUG:</b>
+      <span v-text="rows"></span>
+    </div>
+
     <table-preview></table-preview>
   </div>
 </template>
