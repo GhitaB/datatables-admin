@@ -37,6 +37,7 @@
 
     <div>
       <b>DEBUG:</b>
+      <span v-text="columns"></span>
       <span v-text="rows"></span>
     </div>
 
@@ -169,6 +170,8 @@ export default {
         this.rows[i][col_index] = temp;
       }
 
+      this.columns = this.columns.slice();
+      this.rows = this.rows.slice();
       this.refresh();
     },
 
@@ -186,6 +189,8 @@ export default {
         this.rows[i][col_index] = temp;
       }
 
+      this.columns = this.columns.slice();
+      this.rows = this.rows.slice();
       this.refresh();
     },
 
@@ -197,6 +202,8 @@ export default {
       this.rows[row_index - 1] = this.rows[row_index];
       this.rows[row_index] = temp;
 
+      this.columns = this.columns.slice();
+      this.rows = this.rows.slice();
       this.refresh();
     },
 
@@ -208,6 +215,8 @@ export default {
       this.rows[row_index + 1] = this.rows[row_index];
       this.rows[row_index] = temp;
 
+      this.columns = this.columns.slice();
+      this.rows = this.rows.slice();
       this.refresh();
     }
   }
