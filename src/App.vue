@@ -112,26 +112,33 @@ export default {
     }
   },
   methods: {
+    new_data: function(text) {
+      return {
+        'id': 'ZZZ',
+        'text': text
+      }
+    },
+
     refresh: function() {
       this.$forceUpdate();
     },
 
     update_col: function(content, col_index) {
-      this.columns[col_index] = content;
+      this.columns[col_index].text = content;
       this.refresh();
     },
 
     update_row: function(content, row_index, col_index) {
-      this.rows[row_index][col_index] = content;
+      this.rows[row_index][col_index].text = content;
       this.refresh();
     },
 
     add_col: function(col_index) {
       // Add a new column at given index
-      this.columns.splice(col_index, 0, this.LOREM);
+      this.columns.splice(col_index, 0, this.new_data(this.LOREM));
       for(var i = 0; i < this.rows.length; i++) {
         var row = this.rows[i];
-        row.splice(col_index, 0, this.NONE);
+        row.splice(col_index, 0, this.new_data(this.NONE));
       }
       this.refresh();
     },
