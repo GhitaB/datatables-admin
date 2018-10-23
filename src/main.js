@@ -3,18 +3,6 @@
 import Vue from 'vue'
 import App from './App'
 
-const UNIQUE_KEY_PROP = '__unique_key_prop__'
-
-const KEY_PREFIX = '__key_prefix__' + Date.now() + '_'
-
-const generate_id = obj => {
-  return KEY_PREFIX;
-}
-
-Vue.mixin({
-  methods: { generate_id }  // https://github.com/vuejs/vue/issues/6235#issuecomment-318607296
-})
-
 Vue.config.productionTip = false
 
 Vue.component('editable', {

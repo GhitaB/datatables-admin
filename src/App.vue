@@ -112,6 +112,14 @@ export default {
     }
   },
   methods: {
+    generate_random(min, max) {
+        return Math.random() * (max - min) + min;
+    },
+
+    generate_id: function() {
+      return '__key_prefix__' + Date.now() + '_' + this.generate_random(10000, 99999);
+    },
+
     new_data: function(text) {
       return {
         'id': this.generate_id(),
@@ -120,7 +128,9 @@ export default {
     },
 
     refresh: function() {
-
+      for(var i = 0; i < this.columns.length; i++) {
+        this.columns[i].id = this.generate_id();
+      }
       this.$forceUpdate();
     },
 
