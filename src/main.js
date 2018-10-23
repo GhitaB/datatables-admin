@@ -52,7 +52,7 @@ Vue.component('table-preview', {
         for(var i = 0; i < rows.length; i++) {
           result += "<tr>";
           for(var j = 0; j < rows[i].length; j++) {
-            if(columns[j].text == "URL") {
+            if(columns[j].text == "URL" || columns[j].text.trim() == "URL") {
               result += "<td>" +  render_link(rows[i][j].text) + "</td>";
             } else {
               result += "<td>" + rows[i][j].text + "</td>";
