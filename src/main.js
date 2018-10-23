@@ -45,17 +45,17 @@ Vue.component('table-preview', {
         var result = "<table border=1><thead><tr>";
 
         for(var i = 0; i < columns.length; i++) {
-          result += "<th>" + columns[i] + "</th>";
+          result += "<th>" + columns[i].text + "</th>";
         }
 
         result += "</thead><tbody>"
         for(var i = 0; i < rows.length; i++) {
           result += "<tr>";
           for(var j = 0; j < rows[i].length; j++) {
-            if(columns[j] == "URL") {
-              result += "<td>" +  render_link(rows[i][j]) + "</td>";
+            if(columns[j].text == "URL") {
+              result += "<td>" +  render_link(rows[i][j].text) + "</td>";
             } else {
-              result += "<td>" + rows[i][j] + "</td>";
+              result += "<td>" + rows[i][j].text + "</td>";
             }
           }
           result += "</tr>";
