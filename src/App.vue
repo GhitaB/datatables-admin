@@ -219,14 +219,14 @@ export default {
       if(col_index == 0) {
         return;
       }
-      var temp = this.columns[col_index - 1];
-      this.columns[col_index - 1] = this.columns[col_index];
-      this.columns[col_index] = temp;
+      var temp = this.columns[col_index - 1].text;
+      this.columns[col_index - 1].text = this.columns[col_index].text;
+      this.columns[col_index].text = temp;
 
       for(var i = 0; i < this.rows.length; i++) {
-        temp = this.rows[i][col_index - 1];
-        this.rows[i][col_index - 1] = this.rows[i][col_index];
-        this.rows[i][col_index] = temp;
+        temp = this.rows[i][col_index - 1].text;
+        this.rows[i][col_index - 1].text = this.rows[i][col_index].text;
+        this.rows[i][col_index].text = temp;
       }
 
       this.columns = this.columns.slice();
@@ -238,14 +238,14 @@ export default {
       if(col_index == this.columns.length - 1) {
         return;
       }
-      var temp = this.columns[col_index + 1];
-      this.columns[col_index + 1] = this.columns[col_index];
-      this.columns[col_index] = temp;
+      var temp = this.columns[col_index + 1].text;
+      this.columns[col_index + 1].text = this.columns[col_index].text;
+      this.columns[col_index].text = temp;
 
       for(var i = 0; i < this.rows.length; i++) {
-        temp = this.rows[i][col_index + 1];
-        this.rows[i][col_index + 1] = this.rows[i][col_index];
-        this.rows[i][col_index] = temp;
+        temp = this.rows[i][col_index + 1].text;
+        this.rows[i][col_index + 1].text = this.rows[i][col_index].text;
+        this.rows[i][col_index].text = temp;
       }
 
       this.columns = this.columns.slice();
