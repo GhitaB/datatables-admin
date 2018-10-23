@@ -11,7 +11,7 @@
             <i class="fas fa-plus fa-2x dta-btn add-col" title="Add a column after this one" v-on:click="add_col(index_col + 1)"></i>
             <i class="fas fa-times fa-2x dta-btn delete-col" title="Delete this column" v-on:click="delete_col(index_col)"></i>
             <br />
-            <editable :content="columns[index_col]" v-on:update="update_col($event, index_col)"></editable>
+            <editable :content="columns[index_col].text" v-on:update="update_col($event, index_col)"></editable>
           </th>
           <th>
             <i class="fas fa-plus fa-2x dta-btn add-col" title="Add a column" v-on:click="add_col(0)"></i>
@@ -24,7 +24,7 @@
       <tbody>
         <tr v-for="(row, index_row) in rows" :key="genUniqueKey(index_row)">
           <td v-for="(column, index_col) in columns" :key="genUniqueKey(index_col)">
-            <editable :content="rows[index_row][index_col]" v-on:update="update_row($event, index_row, index_col)"></editable>
+            <editable :content="rows[index_row][index_col].text" v-on:update="update_row($event, index_row, index_col)"></editable>
           <td>
             <i class="fas fa-long-arrow-alt-up fa-2x dta-btn move-row-up" v-on:click="move_row_up(index_row)" title="Move row up"></i>
             <i class="fas fa-long-arrow-alt-down fa-2x dta-btn move-row-down" v-on:click="move_row_down(index_row)" title="Move row down"></i>
@@ -52,10 +52,62 @@ export default {
     return {
       LOREM: "Click me to edit",
       NONE: "",
-      columns: ['Click me to edit', 'Demo column 2', 'Demo column 3', 'URL'],
+      columns: [
+        {
+          'id': '001',
+          'text': 'Click me to edit'
+        },
+        {
+          'id': '002',
+          'text': 'Demo column 2'
+        },
+        {
+          'id': '003',
+          'text': 'Demo column 3'
+        },
+        {
+          'id': '004',
+          'text': 'URL'
+        }
+      ],
       rows: [
-        ['col1 data1', 'col2 data1', 'col3 data1', 'https://www.google.com'],
-        ['col1 data2', 'col2 data2', 'col3 data2', 'https://www.yahoo.com']
+        [
+          {
+            'id': '005',
+            'text': 'col1 data1'
+          },
+          {
+            'id': '006',
+            'text': 'col2 data1'
+          },
+          {
+            'id': '007',
+            'text': 'col3 data1'
+          },
+          {
+            'id': '008',
+            'text': 'https://www.google.com'
+          }
+        ],
+
+        [
+          {
+            'id': '009',
+            'text': 'col1 data2'
+          },
+          {
+            'id': '010',
+            'text': 'col2 data2'
+          },
+          {
+            'id': '011',
+            'text': 'col3 data2'
+          },
+          {
+            'id': '012',
+            'text': 'https://www.yahoo.com'
+          }
+        ]
       ]
     }
   },
