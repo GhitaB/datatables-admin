@@ -105,4 +105,10 @@ body.dta ul.filters-list {
 body.dta ul.filters-list li {
   float: left;
   margin-right: 40px;
+  color: #A0B228;
+}
+
+body.dta ul.filters-list li:hover {
+  cursor: pointer;
+  color: #819110;
 }

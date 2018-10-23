@@ -57,7 +57,7 @@ export default {
     return {
       LOREM: "Click me to edit",
       NONE: "",
-      IS_DEBUG_MODE: true,  // Show or hide data
+      IS_DEBUG_MODE: false,  // Show or hide data
       filters: [
         {
           'id': 'filter01',
