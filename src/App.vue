@@ -131,6 +131,13 @@ export default {
       for(var i = 0; i < this.columns.length; i++) {
         this.columns[i].id = this.generate_id();
       }
+
+      for(var i = 0; i < this.rows.length; i++) {
+        for(var j = 0; j < this.columns.length; j++) {
+          this.rows[i][j].id = this.generate_id();
+        }
+      }
+
       this.$forceUpdate();
     },
 
