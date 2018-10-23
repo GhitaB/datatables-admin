@@ -60,9 +60,17 @@ export default {
       IS_DEBUG_MODE: true,  // Show or hide data
       filters: [
         {
-          'id': '001',
-          'text': 'Click me to edit'
+          'id': 'filter01',
+          'text': 'Demo category'
         },
+        {
+          'id': 'filter02',
+          'text': 'Demo category 2'
+        },
+        {
+          'id': 'filter02',
+          'text': 'Sub-category 3'
+        }
       ],
       columns: [
         {
