@@ -35,10 +35,15 @@
       </tbody>
     </table>
 
-    <div>
-      <b>DEBUG:</b>
-      <span v-text="columns"></span>
-      <span v-text="rows"></span>
+    <div v-if="IS_DEBUG_MODE">
+      <p>
+        <b>Columns:</b>
+        <span v-text="columns"></span>
+      </p>
+      <p>
+        <b>Rows:</b>
+        <span v-text="rows"></span>
+      </p>
     </div>
 
     <table-preview></table-preview>
@@ -52,6 +57,7 @@ export default {
     return {
       LOREM: "Click me to edit",
       NONE: "",
+      IS_DEBUG_MODE: true,  // Show or hide data
       columns: [
         {
           'id': '001',
