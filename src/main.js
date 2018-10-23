@@ -87,7 +87,7 @@ Vue.component('table-preview', {
       });
 
       $(".search-filter").on("click", function() {
-        the_table.fnFilter($(this).text());
+        the_table.fnFilter('"' + $(this).text() + '"');
       });
     }
   }
