@@ -97,3 +97,12 @@ body.dta a {
 body.dta a:hover {
   color: #819110;
 }
+
+body.dta ul.filters-list {
+  padding: 50px;
+}
+
+body.dta ul.filters-list li {
+  float: left;
+  margin-right: 40px;
+}
