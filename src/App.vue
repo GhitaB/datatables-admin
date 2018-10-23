@@ -5,7 +5,7 @@
     <table id="editor">
       <thead>
         <tr>
-          <th v-for="(column, index_col) in columns" :key="genUniqueKey(index_col)">
+          <th v-for="(column, index_col) in columns" :key="index_col">
             <i class="fas fa-long-arrow-alt-left fa-2x dta-btn move-col-left" title="Move column to left" v-on:click="move_col_to_left(index_col)"></i>
             <i class="fas fa-long-arrow-alt-right fa-2x dta-btn move-col-right" title="Move column to right" v-on:click="move_col_to_right(index_col)"></i>
             <i class="fas fa-plus fa-2x dta-btn add-col" title="Add a column after this one" v-on:click="add_col(index_col + 1)"></i>
@@ -22,8 +22,8 @@
         </tr>
       </thead>
       <tbody>
-        <tr v-for="(row, index_row) in rows" :key="genUniqueKey(index_row)">
-          <td v-for="(column, index_col) in columns" :key="genUniqueKey(index_col)">
+        <tr v-for="(row, index_row) in rows" :key="index_row">
+          <td v-for="(column, index_col) in columns" :key="index_col">
             <editable :content="rows[index_row][index_col].text" v-on:update="update_row($event, index_row, index_col)"></editable>
           <td>
             <i class="fas fa-long-arrow-alt-up fa-2x dta-btn move-row-up" v-on:click="move_row_up(index_row)" title="Move row up"></i>
@@ -114,12 +114,13 @@ export default {
   methods: {
     new_data: function(text) {
       return {
-        'id': 'ZZZ',
+        'id': this.generate_id(),
         'text': text
       }
     },
 
     refresh: function() {
+
       this.$forceUpdate();
     },
 
@@ -168,7 +169,7 @@ export default {
       this.rows.splice(row_index, 0, new Array(this.columns.length));
 
       for(var i = 0; i < this.columns.length; i++) {
-        this.rows[row_index][i] = this.NONE;
+        this.rows[row_index][i] = this.new_data(this.NONE);
       }
 
       this.refresh();
