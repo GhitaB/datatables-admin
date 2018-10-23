@@ -31,6 +31,7 @@ Vue.component('table-preview', {
     render_table() {
       var columns = this.$parent.columns;
       var rows = this.$parent.rows;
+      var filters = this.$parent.filters;
       var table_placeholder = document.querySelector('.table-render-preview');
 
       function make_table_html(columns, rows) {
@@ -42,7 +43,13 @@ Vue.component('table-preview', {
           }
         }
 
-        var result = "<table border=1><thead><tr>";
+        var filters_html = "<ul class='filters-list'>";
+        for(var i = 0; i < filters.length; i++) {
+          filters_html += "<li class='search-filter'>" + filters[i].text + "</li>";
+        }
+        filters_html += "</ul>"
+
+        var result = filters_html + "<table border=1><thead><tr>";
 
         for(var i = 0; i < columns.length; i++) {
           result += "<th>" + columns[i].text + "</th>";
@@ -74,9 +81,13 @@ Vue.component('table-preview', {
       new_el.innerHTML = make_table_html(columns, rows);
       table_placeholder.parentNode.replaceChild(new_el, table_placeholder);
 
-      $('.table-render-preview').dataTable({
+      var the_table = $('.table-render-preview').dataTable({
         "destroy": true,
         aaSorting: []
+      });
+
+      $(".search-filter").on("click", function() {
+        the_table.fnFilter($(this).text());
       });
     }
   }

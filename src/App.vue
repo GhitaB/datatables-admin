@@ -58,6 +58,12 @@ export default {
       LOREM: "Click me to edit",
       NONE: "",
       IS_DEBUG_MODE: true,  // Show or hide data
+      filters: [
+        {
+          'id': '001',
+          'text': 'Click me to edit'
+        },
+      ],
       columns: [
         {
           'id': '001',
@@ -80,11 +86,11 @@ export default {
         [
           {
             'id': '005',
-            'text': 'col1 data1'
+            'text': 'Demo category'
           },
           {
             'id': '006',
-            'text': 'col2 data1'
+            'text': 'Sub-category 1'
           },
           {
             'id': '007',
@@ -99,11 +105,11 @@ export default {
         [
           {
             'id': '009',
-            'text': 'col1 data2'
+            'text': 'Demo category'
           },
           {
             'id': '010',
-            'text': 'col2 data2'
+            'text': 'Sub-category 2'
           },
           {
             'id': '011',
@@ -111,6 +117,25 @@ export default {
           },
           {
             'id': '012',
+            'text': 'https://www.yahoo.com'
+          }
+        ],
+
+        [
+          {
+            'id': '013',
+            'text': 'Demo category 2'
+          },
+          {
+            'id': '014',
+            'text': 'Sub-category 3'
+          },
+          {
+            'id': '015',
+            'text': 'col3 data3'
+          },
+          {
+            'id': '016',
             'text': 'https://www.yahoo.com'
           }
         ]
@@ -148,12 +173,12 @@ export default {
     },
 
     update_col: function(content, col_index) {
-      this.columns[col_index].text = content;
+      this.columns[col_index].text = content.trim();
       this.refresh();
     },
 
     update_row: function(content, row_index, col_index) {
-      this.rows[row_index][col_index].text = content;
+      this.rows[row_index][col_index].text = content.trim();
       this.refresh();
     },
 
