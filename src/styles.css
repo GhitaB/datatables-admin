@@ -98,27 +98,12 @@ body.dta a:hover {
   color: #819110;
 }
 
-body.dta ul.filters-list {
-  padding: 50px;
-}
-
-body.dta ul.filters-list li {
-  float: left;
-  margin-right: 40px;
-  color: #A0B228;
-}
-
-body.dta ul.filters-list li:hover {
-  cursor: pointer;
-  color: #819110;
-}
-
 body.dta div.filters-container {
   clear: both;
   text-align: center;
 }
 
-body.dta div.filters-container ul {
+body.dta div.filters-container ul.filters-list {
   display: inline-block;
   margin: 0;
   padding: 0;
@@ -127,8 +112,14 @@ body.dta div.filters-container ul {
   *display: inline;
 }
 
-body.dta div.filters-container li {
+body.dta ul.filters-list li {
   float: left;
-  padding: 2px 5px;
-  border: 1px solid black;
+  color: #A0B228;
+  padding: 10px 20px;
+  margin-right: 20px;
+}
+
+body.dta ul.filters-list li:hover {
+  cursor: pointer;
+  color: #819110;
 }
