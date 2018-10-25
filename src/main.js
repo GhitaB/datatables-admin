@@ -35,7 +35,7 @@ Vue.component('table-preview', {
       var table_placeholder = document.querySelector('.table-render-preview');
 
       function make_filters_html(filters) {
-        var filters_html = "<div class='filters-container'><ul class='filters-list'>";
+        var filters_html = "<div class='filters-container'><p><b>Search filters:</b></p><ul class='filters-list'>";
         for(var i = 0; i < filters.length; i++) {
           filters_html += "<li class='search-filter'>" + filters[i].text + "</li>";
         }
@@ -94,6 +94,8 @@ Vue.component('table-preview', {
 
       $(".search-filter").on("click", function() {
         the_table.fnFilter('"' + $(this).text() + '"');
+        $(".search-filter").removeClass("is-selected");
+        $(this).addClass("is-selected");
       });
     }
   }

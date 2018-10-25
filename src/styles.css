@@ -117,6 +117,11 @@ body.dta ul.filters-list li {
   color: #A0B228;
   padding: 10px 20px;
   margin-right: 20px;
+  list-style: none;
+}
+
+body.dta ul.filters-list li.is-selected {
+  border-bottom: 2px solid #A0B228;
 }
 
 body.dta ul.filters-list li:hover {
