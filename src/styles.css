@@ -112,3 +112,23 @@ body.dta ul.filters-list li:hover {
   cursor: pointer;
   color: #819110;
 }
+
+body.dta div.filters-container {
+  clear: both;
+  text-align: center;
+}
+
+body.dta div.filters-container ul {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  /* For IE, the outcast */
+  zoom:1;
+  *display: inline;
+}
+
+body.dta div.filters-container li {
+  float: left;
+  padding: 2px 5px;
+  border: 1px solid black;
+}

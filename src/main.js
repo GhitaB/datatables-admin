@@ -35,11 +35,11 @@ Vue.component('table-preview', {
       var table_placeholder = document.querySelector('.table-render-preview');
 
       function make_filters_html(filters) {
-        var filters_html = "<ul class='filters-list'>";
+        var filters_html = "<div class='filters-container'><ul class='filters-list'>";
         for(var i = 0; i < filters.length; i++) {
           filters_html += "<li class='search-filter'>" + filters[i].text + "</li>";
         }
-        filters_html += "</ul>"
+        filters_html += "</ul></div>"
 
         return filters_html;
       }
