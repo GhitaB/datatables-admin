@@ -1,12 +1,20 @@
 Changelog
 =========
 
-1.0.2 - (unreleased)
+1.0.2 - (2018-10-26)
 --------------------
 * Fix:
   - update the date structure to have ids for all cells in order to fix the
     rendering of table on rows / columns order change
   - fix links rendering
+
+* Improve:
+  - design
+  - trim input
+
+* Features:
+  - debug mode
+  - add search filters
 
 1.0.1 - (2018-10-10)
 --------------------
